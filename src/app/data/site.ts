@@ -1,25 +1,60 @@
-// Zentrale Inhalte der Seite – Texte mit TODO durch echte Angaben ersetzen.
+// Zentrale Inhalte der Seite (Entwurf auf Basis des LinkedIn-Profils).
 export const site = {
   name: "Kenneth Bolland",
-  role: "Software Developer", // TODO: echte Rolle eintragen
+  role: "Java Backend Developer",
   tagline:
-    "I build clean, fast and accessible web applications.", // TODO: eigene Kurzbeschreibung
+    "I build backend software for logistics and fulfillment at Deichmann – and I'm currently studying Applied Artificial Intelligence.",
   about: [
-    // TODO: echten About-Text eintragen
-    "Hi, I'm Kenneth. This is where a short introduction about who I am, what I do and what drives me will go.",
-    "A second paragraph can cover my background, what I'm currently learning and what kind of projects I enjoy working on.",
+    "Hi, I'm Kenneth – a software developer from Duisburg, Germany. I work as a Java backend developer in the logistics and fulfillment team at Deichmann SE, where I started as a junior developer in 2023.",
+    "I trained as an IT specialist for application development (Fachinformatiker für Anwendungsentwicklung) at Deutsche Telekom IT Solutions, where I got into test automation with Selenium and TypeScript. Since September 2026 I'm studying Applied Artificial Intelligence (B.Sc.) at FOM University of Applied Sciences.",
   ],
   skills: [
+    "Java",
     "TypeScript",
+    "Test automation",
+    "Selenium WebDriver",
+    "Agile development",
     "React",
     "Next.js",
     "Tailwind CSS",
-    "Node.js",
-    "Docker",
-    "Git",
+  ],
+  experience: [
+    {
+      title: "Software Developer",
+      org: "Deichmann SE",
+      period: "Sep 2025 – present",
+      description: "Java backend development for logistics and fulfillment.",
+    },
+    {
+      title: "Junior Software Developer",
+      org: "Deichmann SE",
+      period: "Aug 2023 – Sep 2025",
+    },
+    {
+      title: "Apprentice – IT Specialist for Application Development",
+      org: "Deutsche Telekom IT Solutions",
+      period: "Sep 2020 – Jun 2023",
+    },
+  ],
+  education: [
+    {
+      title: "B.Sc. Applied Artificial Intelligence",
+      org: "FOM University of Applied Sciences",
+      period: "Sep 2026 – Feb 2030",
+    },
+    {
+      title: "Fachinformatiker für Anwendungsentwicklung",
+      org: "Heinz-Nixdorf-Berufskolleg",
+      period: "Aug 2020 – Jun 2023",
+    },
+    {
+      title: "Abitur",
+      org: "Gesamtschule Walsum",
+      period: "2011 – 2020",
+    },
   ],
   links: {
-    github: "https://github.com/kenneth-bolland",
+    github: "https://github.com/jonnef",
     linkedin: "https://www.linkedin.com/in/kenneth-bolland-850478219",
   },
 };

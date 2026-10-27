@@ -13,7 +13,7 @@ export const projects: Project[] = [
     description:
       "This site. Built with the Next.js App Router, a token-based Tailwind design system and light/dark mode.",
     tags: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-    repo: "https://github.com/kenneth-bolland",
+    repo: "https://github.com/jonnef/portfolio",
   },
   // TODO: Platzhalter durch echte Projekte ersetzen
   {
