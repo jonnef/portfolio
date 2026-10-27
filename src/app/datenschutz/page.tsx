@@ -28,8 +28,9 @@ export default function DatenschutzPage() {
 
       <LegalSection heading="3. Hosting und Server-Logfiles">
         <p>
-          Diese Website wird bei Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA gehostet.
-          Beim Aufruf der Website verarbeitet Vercel automatisch Daten, die Ihr Browser übermittelt
+          Diese Website wird bei Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA
+          gehostet (Cloudflare Pages). Beim Aufruf der Website verarbeitet Cloudflare automatisch Daten,
+          die Ihr Browser übermittelt
           (Server-Logfiles):
         </p>
         <ul className="list-disc space-y-1 pl-6">
@@ -42,16 +43,17 @@ export default function DatenschutzPage() {
         <p>
           Die Verarbeitung ist erforderlich, um die Website auszuliefern sowie ihre Stabilität und
           Sicherheit zu gewährleisten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; mein berechtigtes
-          Interesse liegt im sicheren und fehlerfreien Betrieb der Website. Die Logfiles werden von Vercel
+          Interesse liegt im sicheren und fehlerfreien Betrieb der Website. Die Logfiles werden von Cloudflare
           nur für einen begrenzten Zeitraum gespeichert und anschließend gelöscht.
         </p>
         <p>
-          Dabei können Daten in die USA übertragen werden. Vercel ist nach dem EU-US Data Privacy
+          Dabei können Daten in die USA übertragen werden. Cloudflare ist nach dem EU-US Data Privacy
           Framework zertifiziert; für die USA liegt damit ein Angemessenheitsbeschluss der
-          EU-Kommission vor (Art. 45 DSGVO). Mit Vercel besteht ein Vertrag zur Auftragsverarbeitung
-          (Art. 28 DSGVO). Weitere Informationen:{" "}
-          <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className={linkClass}>
-            Datenschutzerklärung von Vercel
+          EU-Kommission vor (Art. 45 DSGVO). Mit Cloudflare besteht ein Vertrag zur
+          Auftragsverarbeitung (Art. 28 DSGVO), der zusätzlich die Standardvertragsklauseln der
+          EU-Kommission enthält. Weitere Informationen:{" "}
+          <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer" className={linkClass}>
+            Datenschutzerklärung von Cloudflare
           </a>
           .
         </p>

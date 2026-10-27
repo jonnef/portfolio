@@ -30,7 +30,7 @@ Then open [http://localhost:3000](http://localhost:3000).
 | --- | --- |
 | `npm run dev` | Start the dev server (with Turbopack) |
 | `npm run build` | Production build |
-| `npm run start` | Serve the production build |
+| `npx serve out` | Preview the static build locally (after `npm run build`) |
 | `npm run lint` | Run ESLint |
 
 ## Project structure
@@ -57,7 +57,12 @@ public/               # Static assets
 
 ## Deployment
 
-Planned: self-hosted via **Docker** behind a **Caddy** reverse proxy with automatic HTTPS.
+Static export (`output: "export"` in `next.config.ts`) hosted on **Cloudflare Pages**:
+
+- Build command: `npm run build`
+- Output directory: `out`
+
+Every push to `main` is deployed automatically.
 
 ---
 

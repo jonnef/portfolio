@@ -43,7 +43,7 @@ export const projects: Project[] = [
     details: {
       overview: [
         "My personal portfolio, where I present my background, my experience and the projects I work on.",
-        "The site is fully static, has no tracking and is deployed on Vercel – every merge to main goes live automatically.",
+        "The site is fully static, has no tracking and is deployed on Cloudflare Pages – every merge to main goes live automatically.",
       ],
       role: "I defined the structure, content and design direction and reviewed every change. The implementation was done together with Claude Code as a pair programmer.",
       highlights: [
