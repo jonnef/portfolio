@@ -50,8 +50,8 @@ public/               # Static assets
 - [x] Responsive layout shell (sticky navbar with mobile burger menu, footer)
 - [x] Light/dark mode with system detection and a manual toggle
 - [x] Design system: neutral (zinc) + accent (emerald) tokens, Geist typography
-- [ ] Project showcase (MDX-based)
-- [ ] About / CV page
+- [ ] Project showcase (MDX-based) — basic data-driven version in `src/app/data/projects.ts`
+- [x] About / CV page (content still placeholder)
 - [ ] Contact form
 - [ ] "Ask my portfolio" AI chat (stretch)
 
