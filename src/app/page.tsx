@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import ProjectCard from "./components/ProjectCard";
+import ProjectGrid from "./components/ProjectGrid";
 import { projects } from "./data/projects";
 import { site } from "./data/site";
 
@@ -35,10 +35,8 @@ export default function Home() {
             All projects
           </Link>
         </div>
-        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.slice(0, 3).map((project) => (
-            <ProjectCard key={project.title} project={project} />
-          ))}
+        <div className="mt-6">
+          <ProjectGrid projects={projects.slice(0, 3)} />
         </div>
       </section>
     </>
