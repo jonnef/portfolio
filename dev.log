@@ -1,0 +1,9 @@
+▲ Next.js 16.2.11 (Turbopack)
+- Local:         http://localhost:3123
+- Network:       http://192.0.2.2:3123
+✓ Ready in 1525ms
+
+○ Compiling / ...
+ GET / 200 in 5.2s (next.js: 4.6s, application-code: 557ms)
+ GET /about-contact 200 in 115ms (next.js: 21ms, application-code: 93ms)
+ GET /about-contact 200 in 64ms (next.js: 3ms, application-code: 60ms)

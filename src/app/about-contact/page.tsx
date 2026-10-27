@@ -6,6 +6,27 @@ export const metadata: Metadata = {
   title: "About & Contact",
 };
 
+type Entry = { title: string; org: string; period: string; description?: string };
+
+const Timeline = ({ heading, entries }: { heading: string; entries: Entry[] }) => (
+  <div>
+    <h2 className="text-2xl font-bold tracking-tight">{heading}</h2>
+    <ol className="mt-6 space-y-6 border-l border-zinc-200 dark:border-zinc-800">
+      {entries.map((entry) => (
+        <li key={entry.title + entry.period} className="relative pl-6">
+          <span className="absolute -left-[5px] top-2 size-2.5 rounded-full bg-accent dark:bg-emerald-400" />
+          <p className="font-mono text-xs text-zinc-500">{entry.period}</p>
+          <h3 className="mt-1 font-semibold">{entry.title}</h3>
+          <p className="text-sm text-zinc-600 dark:text-zinc-400">{entry.org}</p>
+          {entry.description && (
+            <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{entry.description}</p>
+          )}
+        </li>
+      ))}
+    </ol>
+  </div>
+);
+
 const contacts = [
   { label: "LinkedIn", description: "Connect with me", href: site.links.linkedin },
   { label: "GitHub", description: "See my code", href: site.links.github },
@@ -33,6 +54,11 @@ export default function AboutContactPage() {
             </li>
           ))}
         </ul>
+      </section>
+
+      <section className="grid gap-12 pb-20 md:grid-cols-2">
+        <Timeline heading="Experience" entries={site.experience} />
+        <Timeline heading="Education" entries={site.education} />
       </section>
 
       <section id="contact" className="pb-20">

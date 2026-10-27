@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex items-center gap-2">
           <a href="https://www.linkedin.com/in/kenneth-bolland-850478219" target="_blank" rel="noopener noreferrer" className="hover:text-white">LinkedIn</a>
           <span>|</span>
-          <a href="https://github.com/kenneth-bolland" target="_blank" rel="noopener noreferrer" className="hover:text-white">GitHub</a>
+          <a href="https://github.com/jonnef" target="_blank" rel="noopener noreferrer" className="hover:text-white">GitHub</a>
         </div>
       </div>
     </footer>
