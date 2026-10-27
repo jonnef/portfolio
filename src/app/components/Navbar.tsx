@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
-import React, { useEffect, useState } from "react";
+import React, { useState, useSyncExternalStore } from "react";
 import { Sun, Moon } from "lucide-react";
 
 const links = [
@@ -12,30 +14,41 @@ const links = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  // resolvedTheme statt theme: bei "system" ist theme nicht "dark"/"light"
+  const { resolvedTheme, setTheme } = useTheme();
+  // false beim Server-Rendering, true im Browser – vermeidet Hydration-Mismatch beim Icon
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
+
+  const linkClass = (href: string) =>
+    pathname === href ? "text-white" : "text-zinc-400 hover:text-white";
 
   return (
     <nav className="bg-zinc-800 sticky top-0 z-50">
       <div className="w-full px-8 py-4 flex items-center justify-between">
-        <div className="text-white font-bold text-lg">Kenneth Bolland</div>
+        <Link href="/" className="text-white font-bold text-lg">Kenneth Bolland</Link>
         {/* Desktop-Links: erst ab md sichtbar */}
-        <ul className="hidden md:flex space-x-4">
+        <ul className="hidden md:flex items-center space-x-4">
           {links.map((link) => (
             <li key={link.href}>
-              <a href={link.href} className="text-zinc-300 hover:text-white">
+              <Link href={link.href} className={linkClass(link.href)} aria-current={pathname === link.href ? "page" : undefined}>
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
           <li>
-            <div>
-              <button className="text-zinc-300 hover:text-white" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-                {mounted && (theme === "dark" ? <Sun size={20} /> : <Moon size={20} />)}
-              </button>
-            </div>
+            <button
+              className="flex text-zinc-300 hover:text-white"
+              onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+              aria-label="Theme umschalten"
+            >
+              {mounted ? (resolvedTheme === "dark" ? <Sun size={20} /> : <Moon size={20} />) : <span className="size-5" />}
+            </button>
           </li>
         </ul>
 
@@ -54,18 +67,28 @@ const Navbar = () => {
 
       {/* Aufklapp-Menü: nur wenn offen, nur unter md */}
       {isOpen && (
-        <ul className="md:hidden mt-4 space-y-2 px-4">
+        <ul className="md:hidden space-y-3 px-8 pb-5">
           {links.map((link) => (
             <li key={link.href}>
-              <a
+              <Link
                 href={link.href}
-                className="block text-zinc-300 hover:text-white"
+                className={`block ${linkClass(link.href)}`}
+                aria-current={pathname === link.href ? "page" : undefined}
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
+          <li>
+            <button
+              className="flex items-center gap-2 text-zinc-400 hover:text-white"
+              onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+            >
+              {mounted && (resolvedTheme === "dark" ? <Sun size={18} /> : <Moon size={18} />)}
+              {mounted && (resolvedTheme === "dark" ? "Light mode" : "Dark mode")}
+            </button>
+          </li>
         </ul>
       )}
     </nav>
