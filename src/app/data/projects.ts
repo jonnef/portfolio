@@ -16,7 +16,7 @@ export const projects: Project[] = [
   {
     title: "Label Service",
     description:
-      "A backend service that fetches shipping labels, return labels and shipment information from multiple carriers through one REST API.",
+      "A backend service that provides shipping labels, return labels and shipment information from multiple carriers via one REST API.",
     tags: ["Java", "Spring Boot", "Azure", "Kubernetes", "Terraform", "ZPL"],
     image: "/projects/label-service.png",
     // TODO: Entwurf – prüfen und ggf. in eigene Worte bringen
