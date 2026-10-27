@@ -59,7 +59,6 @@ export const site = {
     email: null as string | null,
   },
   links: {
-    github: "https://github.com/jonnef",
     linkedin: "https://www.linkedin.com/in/kenneth-bolland-850478219",
   },
 };

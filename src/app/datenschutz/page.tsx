@@ -74,11 +74,11 @@ export default function DatenschutzPage() {
         </p>
       </LegalSection>
 
-      <LegalSection heading="6. Links zu LinkedIn und GitHub">
+      <LegalSection heading="6. Link zu LinkedIn">
         <p>
-          Diese Website enthält einfache Links zu meinen Profilen bei LinkedIn und GitHub. Es handelt
-          sich nicht um eingebettete Plugins: Erst wenn Sie einen Link anklicken, verlassen Sie diese
-          Website, und es gelten die Datenschutzbestimmungen des jeweiligen Anbieters.
+          Diese Website enthält einen einfachen Link zu meinem LinkedIn-Profil. Es handelt sich nicht
+          um ein eingebettetes Plugin: Erst wenn Sie den Link anklicken, verlassen Sie diese Website,
+          und es gelten die Datenschutzbestimmungen von LinkedIn.
         </p>
       </LegalSection>
 

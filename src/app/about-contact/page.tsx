@@ -29,7 +29,6 @@ const Timeline = ({ heading, entries }: { heading: string; entries: Entry[] }) =
 
 const contacts = [
   { label: "LinkedIn", description: "Connect with me", href: site.links.linkedin },
-  { label: "GitHub", description: "See my code", href: site.links.github },
 ];
 
 export default function AboutContactPage() {
@@ -64,9 +63,9 @@ export default function AboutContactPage() {
       <section id="contact" className="pb-20">
         <h2 className="text-2xl font-bold tracking-tight">Contact</h2>
         <p className="mt-4 max-w-xl text-zinc-600 dark:text-zinc-400">
-          Interested in working together or just want to say hi? Reach out on one of these channels.
+          Interested in working together or just want to say hi? Reach out on LinkedIn.
         </p>
-        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+        <div className="mt-6 grid gap-4 sm:max-w-sm">
           {contacts.map((contact) => (
             <a
               key={contact.label}
