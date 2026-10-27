@@ -11,7 +11,7 @@ export const projects: Project[] = [
     title: "Portfolio Website",
     description:
       "This site. Built with the Next.js App Router, a token-based Tailwind design system and light/dark mode.",
-    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Claude Code"],
     image: "/projects/portfolio.png",
   },
   // TODO: Platzhalter durch echte Projekte ersetzen
