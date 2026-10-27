@@ -14,11 +14,11 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Shipping Label Service",
+    title: "Label Service",
     description:
       "A backend service that fetches shipping labels, return labels and shipment information from multiple carriers through one REST API.",
     tags: ["Java", "Spring Boot", "Azure", "Kubernetes", "Terraform", "ZPL"],
-    image: "/projects/shipping-label-service.png",
+    image: "/projects/label-service.png",
     // TODO: Entwurf – prüfen und ggf. in eigene Worte bringen
     details: {
       overview: [
