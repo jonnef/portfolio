@@ -43,16 +43,25 @@ export default function AboutContactPage() {
         </div>
 
         <h2 className="mt-12 text-2xl font-bold tracking-tight">Skills &amp; tools</h2>
-        <ul className="mt-4 flex flex-wrap gap-2">
-          {site.skills.map((skill) => (
-            <li
-              key={skill}
-              className="rounded-full border border-zinc-200 px-3 py-1 font-mono text-sm dark:border-zinc-800"
-            >
-              {skill}
-            </li>
+        <dl className="mt-6 grid gap-x-8 gap-y-5 sm:grid-cols-[max-content_1fr]">
+          {site.skills.map(({ group, items }) => (
+            <div key={group} className="contents">
+              <dt className="pt-1 text-sm font-medium text-zinc-500">{group}</dt>
+              <dd>
+                <ul className="flex flex-wrap gap-2">
+                  {items.map((skill) => (
+                    <li
+                      key={skill}
+                      className="rounded-full border border-zinc-200 px-3 py-1 font-mono text-sm dark:border-zinc-800"
+                    >
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </dd>
+            </div>
           ))}
-        </ul>
+        </dl>
       </section>
 
       <section className="grid gap-12 pb-20 md:grid-cols-2">

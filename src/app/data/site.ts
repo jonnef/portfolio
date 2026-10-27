@@ -6,17 +6,39 @@ export const site = {
     "I build backend software for logistics and fulfillment at Deichmann – and I'm currently studying Applied Artificial Intelligence.",
   about: [
     "Hi, I'm Kenneth – a software developer from Duisburg, Germany. I work as a Java backend developer in the logistics and fulfillment team at Deichmann SE, where I started as a junior developer in 2023.",
-    "I trained as an IT specialist for application development (Fachinformatiker für Anwendungsentwicklung) at Deutsche Telekom IT Solutions, where I got into test automation with Selenium and TypeScript. Since September 2026 I'm studying Applied Artificial Intelligence (B.Sc.) at FOM University of Applied Sciences.",
+    "I trained as an IT specialist for application development (Fachinformatiker für Anwendungsentwicklung) at Deutsche Telekom IT Solutions. Working closely with my team on real projects, I gained hands-on experience across the full stack – from frontend and backend to databases, testing and deployment. To complete my training, I built a service that fetches traffic data from the German federal Autobahn API, intended to support route planning for field technicians.",
+    "Since September 2026 I'm studying Applied Artificial Intelligence (B.Sc.) at FOM University of Applied Sciences.",
   ],
+  // Gruppiert nach Bereich – neue Einträge einfach in die passende Gruppe
   skills: [
-    "Java",
-    "TypeScript",
-    "Test automation",
-    "Selenium WebDriver",
-    "Agile development",
-    "React",
-    "Next.js",
-    "Tailwind CSS",
+    {
+      group: "Backend",
+      items: ["Java", "Spring Boot", "Node.js", "REST APIs", "ZPL"],
+    },
+    {
+      group: "Frontend",
+      items: ["TypeScript", "React", "Next.js", "HTML", "CSS", "Tailwind CSS"],
+    },
+    {
+      group: "Databases",
+      items: ["SQL", "PostgreSQL", "MongoDB", "Cosmos DB", "PL/SQL"],
+    },
+    {
+      group: "Cloud & DevOps",
+      items: ["Azure", "Blob Storage", "Service Bus", "Kubernetes", "Docker", "Terraform", "CI/CD pipelines"],
+    },
+    {
+      group: "Testing",
+      items: ["Test automation", "JUnit", "Selenium WebDriver", "Postman"],
+    },
+    {
+      group: "Tools & collaboration",
+      items: ["Git", "IntelliJ IDEA", "VS Code", "Jira", "Confluence", "Agile development"],
+    },
+    {
+      group: "AI tools",
+      items: ["Claude Code", "Claude Desktop"],
+    },
   ],
   experience: [
     {
