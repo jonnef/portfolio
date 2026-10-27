@@ -6,7 +6,7 @@ export const site = {
     "I build backend software for logistics and fulfillment at Deichmann – and I'm currently studying Applied Artificial Intelligence.",
   about: [
     "Hi, I'm Kenneth – a software developer from Duisburg, Germany. I work as a Java backend developer in the logistics and fulfillment team at Deichmann SE, where I started as a junior developer in 2023.",
-    "I trained as an IT specialist for application development (Fachinformatiker für Anwendungsentwicklung) at Deutsche Telekom IT Solutions. Working closely with my team on real projects, I gained hands-on experience across the full stack – from frontend and backend to databases, testing and deployment. For my final project, I built a service that fetches traffic data from the German federal Autobahn API, intended to support route planning for field technicians.",
+    "I trained as an IT specialist for application development (Fachinformatiker für Anwendungsentwicklung) at Deutsche Telekom IT Solutions. Working closely with my team on real projects, I gained hands-on experience across the full stack – from frontend and backend to databases, testing and deployment. For my final apprenticeship project, I built a service that fetches traffic data from the German federal Autobahn API, intended to support route planning for field technicians.",
     "Since September 2026 I'm studying Applied Artificial Intelligence (B.Sc.) at FOM University of Applied Sciences.",
   ],
   // Gruppiert nach Bereich – neue Einträge einfach in die passende Gruppe
@@ -34,6 +34,10 @@ export const site = {
     {
       group: "Tools & collaboration",
       items: ["Git", "IntelliJ IDEA", "VS Code", "Jira", "Confluence", "Agile development"],
+    },
+    {
+      group: "AI tools",
+      items: ["Claude Code", "Claude Desktop"],
     },
   ],
   experience: [
