@@ -23,13 +23,13 @@ export const projects: Project[] = [
     details: {
       overview: [
         "A backend service that connects several shipping carriers to one platform. Client applications request shipping labels, return labels or shipment information through a single REST API – regardless of which carrier is behind it.",
-        "The service runs on Kubernetes and uses Azure Cosmos DB and Blob Storage. When a return label is requested, it publishes a message to Azure Service Bus so that downstream systems can notify the customer or the carrier. The infrastructure is provisioned with Terraform.",
+        "The service runs on Kubernetes and uses Azure Cosmos DB and Blob Storage. When a return label is requested, it publishes a message to Azure Service Bus that informs downstream systems about the return, including the necessary details such as the carrier's tracking data. The infrastructure is provisioned with Terraform.",
       ],
       role: "Software developer on the service, built at work for a large retailer. Besides the implementation, I contributed to its architectural design.",
       highlights: [
         "Built 300 dpi ZPL labels from scratch for a carrier that only provided 203 dpi – one national and one international layout – after scaling the existing graphics didn't deliver sufficient print quality",
         "Consistent error responses: a global exception handler returns the errors of all carriers in the same structure, so API consumers only have to handle one format",
-        "Event-driven notifications for return labels via Azure Service Bus",
+        "Return requests are published as messages to Azure Service Bus, so downstream systems receive the return details including tracking data",
       ],
     },
   },
