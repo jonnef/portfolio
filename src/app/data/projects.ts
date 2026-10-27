@@ -54,11 +54,23 @@ export const projects: Project[] = [
       ],
     },
   },
-  // TODO: Platzhalter durch echte Projekte ersetzen
   {
-    title: "Another project",
-    description: "A short description of the project, the problem it solves and what I learned.",
-    tags: ["Coming soon"],
-    placeholder: true,
+    title: "Road Data Service",
+    description:
+      "A REST service that provides closures, roadworks, warnings and traffic jams for given geo points from the German Autobahn API – as input for route planning.",
+    tags: ["Java", "Spring Boot", "REST APIs", "Autobahn API"],
+    image: "/projects/road-data-service.png",
+    // TODO: Entwurf – prüfen und ggf. in eigene Worte bringen
+    details: {
+      overview: [
+        "The service provides a RESTful endpoint: based on the geo points in the request, it returns all relevant closures, roadworks, warnings, traffic jams and other events from the public Autobahn API of the German federal government.",
+        "The results are meant to be used by route planning software, for example to plan an optimal and efficient route for field technicians. My part was building the service itself – integrating it into other systems wasn't part of the project.",
+      ],
+      role: "Designed and built the service on my own to complete my training as an IT specialist for application development.",
+      highlights: [
+        "Data evaluation: the raw data was partly duplicated and entries were hard to identify, so the service evaluates it and returns a clean result",
+        "One request returns all relevant events for the requested geo points – closures, roadworks, warnings and traffic jams",
+      ],
+    },
   },
 ];
