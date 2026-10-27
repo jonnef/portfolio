@@ -53,6 +53,11 @@ export const site = {
       period: "2011 – 2020",
     },
   ],
+  // Pflichtangaben für Impressum/Datenschutz – null = noch nicht eingetragen
+  legal: {
+    address: null as string[] | null, // z. B. ["Musterstraße 1", "47051 Duisburg"]
+    email: null as string | null,
+  },
   links: {
     github: "https://github.com/jonnef",
     linkedin: "https://www.linkedin.com/in/kenneth-bolland-850478219",
