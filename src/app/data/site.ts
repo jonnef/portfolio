@@ -8,15 +8,28 @@ export const site = {
     "Hi, I'm Kenneth – a software developer from Duisburg, Germany. I work as a Java backend developer in the logistics and fulfillment team at Deichmann SE, where I started as a junior developer in 2023.",
     "I trained as an IT specialist for application development (Fachinformatiker für Anwendungsentwicklung) at Deutsche Telekom IT Solutions, where I got into test automation with Selenium and TypeScript. Since September 2026 I'm studying Applied Artificial Intelligence (B.Sc.) at FOM University of Applied Sciences.",
   ],
+  // Gruppiert nach Bereich – neue Einträge einfach in die passende Gruppe
   skills: [
-    "Java",
-    "TypeScript",
-    "Test automation",
-    "Selenium WebDriver",
-    "Agile development",
-    "React",
-    "Next.js",
-    "Tailwind CSS",
+    {
+      group: "Backend",
+      items: ["Java", "Spring Boot", "REST APIs", "ZPL"],
+    },
+    {
+      group: "Frontend",
+      items: ["TypeScript", "React", "Next.js", "Tailwind CSS"],
+    },
+    {
+      group: "Cloud & infrastructure",
+      items: ["Azure", "Cosmos DB", "Blob Storage", "Service Bus", "Kubernetes", "Terraform"],
+    },
+    {
+      group: "Testing",
+      items: ["Test automation", "Selenium WebDriver"],
+    },
+    {
+      group: "Collaboration",
+      items: ["Agile development", "Jira", "Confluence"],
+    },
   ],
   experience: [
     {
