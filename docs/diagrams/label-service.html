@@ -1,0 +1,92 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+  html,body{margin:0;background:#fafafa}
+  svg{display:block;font-family:Inter,sans-serif}
+  .box{fill:#fff;stroke:#d4d4d8;stroke-width:2}
+  .inner{fill:#f4f4f5;stroke:#e4e4e7;stroke-width:2}
+  .accent{fill:#ecfdf5;stroke:#047857;stroke-width:2.5}
+  .azure{fill:#fff;stroke:#a1a1aa;stroke-width:2;stroke-dasharray:6 5}
+  .t{fill:#18181b;font-weight:600}
+  .s{fill:#71717a;font-weight:500}
+  .g{fill:#047857;font-weight:700}
+  .line{stroke:#a1a1aa;stroke-width:2.5;fill:none}
+  .line-g{stroke:#047857;stroke-width:2.5;fill:none}
+</style></head><body>
+<svg width="1280" height="800" viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="#e4e4e7"/></pattern>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#a1a1aa"/></marker>
+    <marker id="arr-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker>
+  </defs>
+  <rect width="1280" height="800" fill="url(#dots)"/>
+
+  <!-- Clients -->
+  <rect class="box" x="50" y="270" width="210" height="150" rx="16"/>
+  <g transform="translate(155,318)" fill="none" stroke="#71717a" stroke-width="3">
+    <rect x="-26" y="-18" width="52" height="36" rx="4"/><path d="M-14,26 h28"/><path d="M0,18 v8"/>
+  </g>
+  <text class="t" x="155" y="385" font-size="26" text-anchor="middle">Clients</text>
+  <path class="line-g" d="M262,345 H322" marker-end="url(#arr-g)" marker-start="url(#arr-g)"/>
+  <text class="g" x="292" y="332" font-size="18" text-anchor="middle">REST</text>
+
+  <!-- Service -->
+  <rect x="330" y="70" width="580" height="500" rx="20" fill="#fff" stroke="#047857" stroke-width="3"/>
+  <text class="t" x="360" y="122" font-size="32">Label Service</text>
+  <text class="s" x="360" y="154" font-size="20">Java · Spring Boot · Kubernetes</text>
+
+  <!-- linke Spalte: API und Fehlerbehandlung -->
+  <rect class="inner" x="360" y="180" width="250" height="170" rx="12"/>
+  <text class="t" x="485" y="258" font-size="22" text-anchor="middle">Unified</text>
+  <text class="t" x="485" y="286" font-size="22" text-anchor="middle">REST API</text>
+
+  <rect class="inner" x="360" y="365" width="250" height="175" rx="12"/>
+  <text class="t" x="485" y="430" font-size="21" text-anchor="middle">Global exception</text>
+  <text class="t" x="485" y="457" font-size="21" text-anchor="middle">handler</text>
+  <text class="s" x="485" y="490" font-size="16" text-anchor="middle">one error format</text>
+  <text class="s" x="485" y="511" font-size="16" text-anchor="middle">for all carriers</text>
+
+  <!-- rechte Spalte: ein Adapter pro Carrier -->
+  <text class="s" x="755" y="174" font-size="15" text-anchor="middle" letter-spacing="1">ADAPTERS</text>
+  <rect class="accent" x="630" y="185" width="250" height="150" rx="12"/>
+  <text class="t" x="650" y="222" font-size="21">Adapter A</text>
+  <rect x="650" y="240" width="210" height="76" rx="10" fill="#047857"/>
+  <text x="755" y="272" font-size="19" font-weight="700" fill="#fff" text-anchor="middle">ZPL labels</text>
+  <text x="755" y="298" font-size="17" font-weight="600" fill="#d1fae5" text-anchor="middle">300 dpi, built in-house</text>
+
+  <rect class="inner" x="630" y="350" width="250" height="85" rx="12"/>
+  <text class="t" x="755" y="400" font-size="21" text-anchor="middle">Adapter B</text>
+
+  <rect class="inner" x="630" y="450" width="250" height="90" rx="12"/>
+  <text class="t" x="755" y="502" font-size="21" text-anchor="middle">Adapter C</text>
+
+  <!-- Carrier-APIs, jeweils auf Höhe ihres Adapters -->
+  <text class="s" x="1120" y="170" font-size="15" text-anchor="middle" letter-spacing="1">EXTERNAL CARRIER APIS</text>
+  <rect class="box" x="1010" y="210" width="220" height="90" rx="14"/>
+  <text class="t" x="1120" y="263" font-size="23" text-anchor="middle">Carrier A API</text>
+  <rect class="box" x="1010" y="350" width="220" height="85" rx="14"/>
+  <text class="t" x="1120" y="400" font-size="23" text-anchor="middle">Carrier B API</text>
+  <rect class="box" x="1010" y="450" width="220" height="90" rx="14"/>
+  <text class="t" x="1120" y="503" font-size="23" text-anchor="middle">Carrier C API</text>
+  <path class="line" d="M882,255 H1002" marker-end="url(#arr)"/>
+  <path class="line" d="M882,392 H1002" marker-end="url(#arr)"/>
+  <path class="line" d="M882,495 H1002" marker-end="url(#arr)"/>
+
+  <!-- Azure -->
+  <path class="line" d="M450,572 V632" marker-end="url(#arr)"/>
+  <path class="line" d="M620,572 V632" marker-end="url(#arr)"/>
+  <path class="line" d="M790,572 V632" marker-end="url(#arr)"/>
+  <rect class="azure" x="370" y="640" width="160" height="96" rx="12"/>
+  <text class="t" x="450" y="696" font-size="21" text-anchor="middle">Cosmos DB</text>
+  <rect class="azure" x="540" y="640" width="160" height="96" rx="12"/>
+  <text class="t" x="620" y="696" font-size="21" text-anchor="middle">Blob Storage</text>
+  <rect class="azure" x="710" y="640" width="170" height="96" rx="12"/>
+  <text class="t" x="795" y="684" font-size="21" text-anchor="middle">Service Bus</text>
+  <text class="s" x="795" y="710" font-size="16" text-anchor="middle">return label created</text>
+  <path class="line" d="M882,688 H952" marker-end="url(#arr)" stroke-dasharray="6 5"/>
+  <text class="s" x="962" y="682" font-size="17">downstream systems</text>
+  <text class="s" x="962" y="704" font-size="17">(incl. tracking data)</text>
+  <text class="s" x="50" y="676" font-size="18">Azure</text>
+  <text class="s" x="50" y="700" font-size="16">provisioned</text>
+  <text class="s" x="50" y="720" font-size="16">with Terraform</text>
+</svg>
+</body></html>
