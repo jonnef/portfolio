@@ -1,7 +1,8 @@
 // Zentrale Inhalte der Seite (Entwurf auf Basis des LinkedIn-Profils).
 export const site = {
   name: "Kenneth Bolland",
-  role: "Java Backend Developer",
+  // Geschützte Leerzeichen + Word Joiner: „Logistics | Fulfillment“ bricht nicht um
+  role: "Backend Developer Logistics\u00a0\u2060|\u2060\u00a0Fulfillment",
   tagline:
     "I work on backend systems for logistics and fulfillment at Deichmann while pursuing a degree in Applied Artificial Intelligence.",
   about: [
