@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Hilfsskripte für die Grafiken, nicht Teil der Seite
+    "docs/**",
   ]),
 ]);
 

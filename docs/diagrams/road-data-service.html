@@ -1,0 +1,85 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+  html,body{margin:0;background:#fafafa}
+  svg{display:block;font-family:Inter,sans-serif}
+  .box{fill:#fff;stroke:#d4d4d8;stroke-width:2}
+  .dash{fill:#fff;stroke:#a1a1aa;stroke-width:2;stroke-dasharray:6 5}
+  .inner{fill:#f4f4f5;stroke:#e4e4e7;stroke-width:2}
+  .accent{fill:#ecfdf5;stroke:#047857;stroke-width:2.5}
+  .chip{fill:#f4f4f5;stroke:#e4e4e7;stroke-width:1.5}
+  .t{fill:#18181b;font-weight:600}
+  .s{fill:#71717a;font-weight:500}
+  .g{fill:#047857;font-weight:700}
+  .line{stroke:#a1a1aa;stroke-width:2.5;fill:none}
+  .line-g{stroke:#047857;stroke-width:2.5;fill:none}
+</style></head><body>
+<svg width="1280" height="800" viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="#e4e4e7"/></pattern>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#a1a1aa"/></marker>
+    <marker id="arr-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker>
+  </defs>
+  <rect width="1280" height="800" fill="url(#dots)"/>
+  <g transform="translate(0,40)">
+
+  <!-- Consumer -->
+  <rect class="dash" x="40" y="285" width="230" height="170" rx="16"/>
+  <g transform="translate(155,335)" fill="none" stroke="#71717a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-30,18 C-10,18 -10,-14 10,-14 C24,-14 24,4 30,4"/>
+    <circle cx="-30" cy="18" r="5" fill="#71717a"/><circle cx="30" cy="4" r="5" fill="#71717a"/>
+  </g>
+  <text class="t" x="155" y="395" font-size="23" text-anchor="middle">Route planning</text>
+  <text class="s" x="155" y="422" font-size="16" text-anchor="middle">e.g. for field technicians</text>
+
+  <path class="line-g" d="M272,340 H332" marker-end="url(#arr-g)"/>
+  <text class="g" x="300" y="309" font-size="14" text-anchor="middle">geo</text>
+  <text class="g" x="300" y="324" font-size="14" text-anchor="middle">points</text>
+  <path class="line" d="M332,400 H280" marker-end="url(#arr)"/>
+  <text class="s" x="306" y="426" font-size="15" text-anchor="middle">events</text>
+
+  <!-- Service -->
+  <rect x="340" y="90" width="560" height="560" rx="20" fill="#fff" stroke="#047857" stroke-width="3"/>
+  <text class="t" x="370" y="142" font-size="32">Road Data Service</text>
+  <text class="s" x="370" y="174" font-size="20">Java · Spring Boot</text>
+
+  <rect class="inner" x="370" y="205" width="500" height="80" rx="12"/>
+  <text class="t" x="620" y="242" font-size="22" text-anchor="middle">RESTful endpoint</text>
+  <text class="s" x="620" y="267" font-size="16" text-anchor="middle">request with geo points</text>
+  <path class="line" d="M620,287 V313" marker-end="url(#arr)"/>
+
+  <rect class="inner" x="370" y="320" width="500" height="80" rx="12"/>
+  <text class="t" x="620" y="357" font-size="22" text-anchor="middle">Collect events</text>
+  <text class="s" x="620" y="382" font-size="16" text-anchor="middle">for the requested area</text>
+  <path class="line" d="M620,402 V428" marker-end="url(#arr)"/>
+
+  <rect class="accent" x="370" y="435" width="500" height="185" rx="12"/>
+  <text class="t" x="620" y="477" font-size="23" text-anchor="middle">Data evaluation</text>
+  <text class="s" x="620" y="503" font-size="16" text-anchor="middle">detect duplicate and hard-to-identify entries</text>
+  <g font-size="16" font-weight="600">
+    <rect x="395" y="530" width="210" height="64" rx="10" fill="#fff" stroke="#d4d4d8" stroke-width="1.5"/>
+    <text x="500" y="556" text-anchor="middle" fill="#71717a">raw API data</text>
+    <text x="500" y="580" text-anchor="middle" fill="#a1a1aa">partly duplicated</text>
+    <path class="line-g" d="M612,562 H628" marker-end="url(#arr-g)"/>
+    <rect x="635" y="530" width="210" height="64" rx="10" fill="#047857"/>
+    <text x="740" y="556" text-anchor="middle" fill="#fff">clean result</text>
+    <text x="740" y="580" text-anchor="middle" fill="#d1fae5">ready for routing</text>
+  </g>
+
+  <!-- Autobahn API -->
+  <text class="s" x="1105" y="226" font-size="15" text-anchor="middle" letter-spacing="1">PUBLIC API</text>
+  <rect class="box" x="990" y="240" width="230" height="110" rx="14"/>
+  <text class="t" x="1105" y="290" font-size="24" text-anchor="middle">Autobahn API</text>
+  <text class="s" x="1105" y="318" font-size="16" text-anchor="middle">German federal government</text>
+  <path class="line" d="M872,360 C930,360 930,295 982,295" marker-end="url(#arr)"/>
+
+  <text class="s" x="1105" y="412" font-size="15" text-anchor="middle" letter-spacing="1">EVENTS</text>
+  <g font-size="18" font-weight="600" fill="#18181b" text-anchor="middle">
+    <rect class="chip" x="990" y="426" width="230" height="44" rx="22"/><text x="1105" y="454">Closures</text>
+    <rect class="chip" x="990" y="480" width="230" height="44" rx="22"/><text x="1105" y="508">Roadworks</text>
+    <rect class="chip" x="990" y="534" width="230" height="44" rx="22"/><text x="1105" y="562">Warnings</text>
+    <rect class="chip" x="990" y="588" width="230" height="44" rx="22"/><text x="1105" y="616">Traffic jams</text>
+  </g>
+
+  </g>
+</svg>
+</body></html>
