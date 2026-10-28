@@ -1,0 +1,92 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+  html,body{margin:0;background:#fafafa}
+  svg{display:block;font-family:Inter,sans-serif}
+  .box{fill:#fff;stroke:#d4d4d8;stroke-width:2}
+  .inner{fill:#f4f4f5;stroke:#e4e4e7;stroke-width:2}
+  .accent{fill:#ecfdf5;stroke:#047857;stroke-width:2.5}
+  .azure{fill:#fff;stroke:#a1a1aa;stroke-width:2;stroke-dasharray:6 5}
+  .pill{fill:#fff;stroke:#a7f3d0;stroke-width:2}
+  .t{fill:#18181b;font-weight:600}
+  .s{fill:#71717a;font-weight:500}
+  .g{fill:#047857;font-weight:700}
+  .line{stroke:#a1a1aa;stroke-width:2.5;fill:none}
+  .line-g{stroke:#047857;stroke-width:2.5;fill:none}
+</style></head><body>
+<svg width="1280" height="800" viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="#e4e4e7"/></pattern>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#a1a1aa"/></marker>
+    <marker id="arr-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker>
+  </defs>
+  <rect width="1280" height="800" fill="url(#dots)"/>
+
+  <!-- Online-Shop -->
+  <rect class="box" x="30" y="180" width="180" height="380" rx="16"/>
+  <g transform="translate(120,330)" fill="none" stroke="#71717a" stroke-width="3" stroke-linejoin="round">
+    <path d="M-30,-22 h10 l8,34 h30 l7,-24 h-41"/><circle cx="-8" cy="22" r="4"/><circle cx="16" cy="22" r="4"/>
+  </g>
+  <text class="t" x="120" y="392" font-size="25" text-anchor="middle">Online shop</text>
+  <text class="s" x="120" y="420" font-size="19" text-anchor="middle">Checkout</text>
+
+  <!-- Service -->
+  <rect x="350" y="70" width="560" height="520" rx="20" fill="#fff" stroke="#047857" stroke-width="3"/>
+  <text class="t" x="380" y="122" font-size="32">PUDO Service</text>
+  <text class="s" x="380" y="154" font-size="20">Java · Spring Boot · Kubernetes</text>
+
+  <rect class="inner" x="380" y="180" width="500" height="90" rx="12"/>
+  <text class="t" x="630" y="233" font-size="22" text-anchor="middle">REST API</text>
+  <path class="line" d="M630,272 V287" marker-end="url(#arr)"/>
+
+  <rect class="inner" x="380" y="295" width="500" height="90" rx="12"/>
+  <text class="t" x="630" y="335" font-size="22" text-anchor="middle">Carrier request</text>
+  <text class="s" x="630" y="362" font-size="16" text-anchor="middle">selected by carrier and country</text>
+  <path class="line" d="M630,387 V402" marker-end="url(#arr)"/>
+
+  <rect class="accent" x="380" y="410" width="500" height="150" rx="12"/>
+  <text class="t" x="400" y="444" font-size="21">Unified response</text>
+  <text class="s" x="860" y="444" font-size="15" text-anchor="end">same format for every carrier</text>
+  <rect class="pill" x="400" y="462" width="80" height="34" rx="17"/>
+  <text class="g" x="440" y="485" font-size="15" text-anchor="middle">Type</text>
+  <rect class="pill" x="490" y="462" width="150" height="34" rx="17"/>
+  <text class="g" x="565" y="485" font-size="15" text-anchor="middle">Opening hours</text>
+  <rect class="pill" x="650" y="462" width="105" height="34" rx="17"/>
+  <text class="g" x="702" y="485" font-size="15" text-anchor="middle">Distance</text>
+  <rect class="pill" x="765" y="462" width="100" height="34" rx="17"/>
+  <text class="g" x="815" y="485" font-size="15" text-anchor="middle">Coords</text>
+  <rect x="400" y="508" width="465" height="36" rx="18" fill="#047857"/>
+  <text x="632" y="532" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">Address split into separate fields</text>
+
+  <!-- Anfrage und Antwort -->
+  <path class="line" d="M212,225 H372" marker-end="url(#arr)"/>
+  <text class="s" x="281" y="252" font-size="14" text-anchor="middle">carrier</text>
+  <text class="s" x="281" y="270" font-size="14" text-anchor="middle">country</text>
+  <text class="s" x="281" y="288" font-size="14" text-anchor="middle">address or</text>
+  <text class="s" x="281" y="306" font-size="14" text-anchor="middle">geo location</text>
+  <path class="line-g" d="M378,485 H218" marker-end="url(#arr-g)"/>
+  <text class="g" x="281" y="452" font-size="16" text-anchor="middle">unified</text>
+  <text class="g" x="281" y="471" font-size="16" text-anchor="middle">response</text>
+
+  <!-- Carrier-APIs -->
+  <text class="s" x="1120" y="200" font-size="15" text-anchor="middle" letter-spacing="1">EXTERNAL CARRIER APIS</text>
+  <rect class="box" x="1010" y="215" width="220" height="80" rx="14"/>
+  <text class="t" x="1120" y="263" font-size="23" text-anchor="middle">Carrier A API</text>
+  <rect class="box" x="1010" y="315" width="220" height="80" rx="14"/>
+  <text class="t" x="1120" y="363" font-size="23" text-anchor="middle">Carrier B API</text>
+  <rect class="box" x="1010" y="415" width="220" height="80" rx="14"/>
+  <text class="t" x="1120" y="463" font-size="23" text-anchor="middle">Carrier C API</text>
+  <path class="line" d="M920,255 H1002" marker-end="url(#arr)" marker-start="url(#arr)"/>
+  <path class="line" d="M920,355 H1002" marker-end="url(#arr)" marker-start="url(#arr)"/>
+  <path class="line" d="M920,455 H1002" marker-end="url(#arr)" marker-start="url(#arr)"/>
+  <text class="s" x="1120" y="530" font-size="16" text-anchor="middle">different formats</text>
+  <text class="s" x="1120" y="551" font-size="16" text-anchor="middle">per carrier</text>
+
+  <!-- Betrieb -->
+  <rect class="azure" x="350" y="630" width="330" height="100" rx="12"/>
+  <text class="t" x="515" y="672" font-size="21" text-anchor="middle">Kubernetes on Azure</text>
+  <text class="s" x="515" y="700" font-size="16" text-anchor="middle">provisioned with Terraform</text>
+  <rect class="azure" x="700" y="630" width="210" height="100" rx="12"/>
+  <text class="t" x="805" y="672" font-size="21" text-anchor="middle">Stateless</text>
+  <text class="s" x="805" y="700" font-size="16" text-anchor="middle">no data stored</text>
+</svg>
+</body></html>
