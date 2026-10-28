@@ -3,7 +3,7 @@ export const site = {
   name: "Kenneth Bolland",
   role: "Java Backend Developer",
   tagline:
-    "I build backend software for logistics and fulfillment at Deichmann – and I'm currently studying Applied Artificial Intelligence.",
+    "I work on backend systems for logistics and fulfillment at Deichmann while pursuing a degree in Applied Artificial Intelligence.",
   about: [
     "Hi, I'm Kenneth – a software developer from Duisburg, Germany. I work as a Java backend developer in the logistics and fulfillment team at Deichmann SE, where I started as a junior developer in 2023.",
     "I trained as an IT specialist for application development (Fachinformatiker für Anwendungsentwicklung) at Deutsche Telekom IT Solutions. Working closely with my team on real projects, I gained hands-on experience across the full stack – from frontend and backend to databases, testing and deployment. To complete my training, I built a service that fetches traffic data from the German federal Autobahn API, intended to support route planning for field technicians.",
