@@ -5,9 +5,11 @@ import Tags from "./Tags";
 type Props = {
   project: Project;
   onOpen?: (card: HTMLElement) => void;
+  // false für Kopien in der Endlos-Slideshow: per Maus klickbar, aber nicht per Tab erreichbar
+  focusable?: boolean;
 };
 
-const ProjectCard = ({ project, onOpen }: Props) => {
+const ProjectCard = ({ project, onOpen, focusable = true }: Props) => {
   const clickable = Boolean(project.details && onOpen);
 
   return (
@@ -39,6 +41,7 @@ const ProjectCard = ({ project, onOpen }: Props) => {
             // after:inset-0 macht die ganze Karte klickbar, der Button bleibt für Tastatur/Screenreader erreichbar
             <button
               type="button"
+              tabIndex={focusable ? undefined : -1}
               onClick={(e) => onOpen?.(e.currentTarget.closest("article")!)}
               className="text-left after:absolute after:inset-0 after:content-[''] focus-visible:outline-none group-has-[:focus-visible]:underline"
             >
