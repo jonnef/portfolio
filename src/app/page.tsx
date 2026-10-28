@@ -36,7 +36,7 @@ export default function Home() {
           </Link>
         </div>
         <div className="mt-6">
-          <ProjectGrid projects={projects.slice(0, 3)} />
+          <ProjectGrid projects={projects} layout="carousel" />
         </div>
       </section>
     </>
