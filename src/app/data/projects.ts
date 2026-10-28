@@ -39,10 +39,9 @@ export const projects: Project[] = [
       "A REST service that provides parcel lockers and parcel shops from multiple carriers in one unified format for the online shop's checkout.",
     tags: ["Java", "Spring Boot", "Azure", "Kubernetes", "Terraform", "REST APIs"],
     image: "/projects/pudo-service.png",
-    // TODO: Entwurf – prüfen und ggf. in eigene Worte bringen
     details: {
       overview: [
-        "PUDO stands for pick-up and drop-off. The service provides parcel lockers and parcel shops to the online shop's checkout, so customers can choose where to pick up or drop off their parcel.",
+        "PUDO stands for pick-up and drop-off. The service provides parcel lockers and parcel shops to the online shop's checkout, so customers can have their order delivered there as an alternative to their home address and pick it up.",
         "The shop sends a request with the carrier, the country and an address or geo location. Based on carrier and country, the service calls the matching carrier API, processes the data and returns it in a unified response – including the type of location, opening hours, distance and coordinates. The service is stateless and stores no data. It runs on Kubernetes in Azure, and the infrastructure is provisioned with Terraform.",
       ],
       role: "Software developer in a team of four, built at work for a large retailer. I worked on the implementation, the API design and the integration of the carrier APIs, and contributed to the architectural design.",
