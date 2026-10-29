@@ -69,6 +69,11 @@ export default function AboutContactPage() {
         <Timeline heading="Education" entries={site.education} />
       </section>
 
+      <section className="pb-20">
+        <h2 className="text-2xl font-bold tracking-tight">Beyond code</h2>
+        <p className="mt-4 max-w-2xl text-zinc-600 dark:text-zinc-400">{site.beyondCode}</p>
+      </section>
+
       <section id="contact" className="pb-20">
         <h2 className="text-2xl font-bold tracking-tight">Contact</h2>
         <p className="mt-4 max-w-xl text-zinc-600 dark:text-zinc-400">
