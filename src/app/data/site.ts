@@ -10,6 +10,8 @@ export const site = {
     "I trained as an IT specialist for application development (Fachinformatiker für Anwendungsentwicklung) at Deutsche Telekom IT Solutions. Working closely with my team on real projects, I gained hands-on experience across the full stack – from frontend and backend to databases, testing and deployment. To complete my training, I built a service that fetches traffic data from the German federal Autobahn API, intended to support route planning for field technicians.",
     "Since September 2026 I'm studying Applied Artificial Intelligence (B.Sc.) at FOM University of Applied Sciences.",
   ],
+  beyondCode:
+    "Away from the keyboard, football and darts are my two big passions, whether I'm playing myself or watching. Just as important to me is time with friends and family.",
   // Gruppiert nach Bereich – neue Einträge einfach in die passende Gruppe
   skills: [
     {
